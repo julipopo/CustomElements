@@ -6,6 +6,7 @@
 Native customized iOS elements
 
 #### Custom Switch
+##### Credit to https://dribbble.com/shots/3547388-Bali-Explorer-App-Switches
 <br>
 <img src="forGit/anim.gif" width="300px">  <img src="forGit/screenIB.png" width="300px">
 
