@@ -8,9 +8,9 @@
 
 import UIKit
 
-
+@IBDesignable
 class CustomSwitch: UIView {
-
+    
     var imageStateOn : UIImage = UIImage()
     var imageStateOff : UIImage = UIImage()
     var backgroundImageView : UIImageView = UIImageView()
@@ -20,6 +20,31 @@ class CustomSwitch: UIView {
     var h:CGFloat = 0
     var w:CGFloat = 0
     var ballSize : CGFloat = 0
+    
+    @IBInspectable var onImage: UIImage? {
+        get {
+            return imageStateOn
+        }
+        set {
+            imageStateOn = newValue!
+        }
+    }
+    @IBInspectable var offImage: UIImage? {
+        get {
+            return imageStateOff
+        }
+        set {
+            imageStateOff = newValue!
+        }
+    }
+    @IBInspectable var value: Bool? {
+        get {
+            return isOn
+        }
+        set {
+            isOn = newValue!
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -65,32 +90,5 @@ class CustomSwitch: UIView {
             self.ball.frame = self.isOn ? CGRect(x: self.w-self.ballSize-self.borderBall, y: self.borderBall, width: self.ballSize, height: self.ballSize) : CGRect(x: self.borderBall, y: self.borderBall, width: self.ballSize, height: self.ballSize)
             self.backgroundImageView.image = self.isOn ? self.imageStateOn : self.imageStateOff
         })
-    }
-}
-
-extension CustomSwitch {
-    @IBInspectable var onImage: UIImage? {
-        get {
-            return imageStateOn
-        }
-        set {
-            imageStateOn = newValue!
-        }
-    }
-    @IBInspectable var offImage: UIImage? {
-        get {
-            return imageStateOff
-        }
-        set {
-            imageStateOff = newValue!
-        }
-    }
-    @IBInspectable var value: Bool? {
-        get {
-            return isOn
-        }
-        set {
-            isOn = newValue!
-        }
     }
 }
