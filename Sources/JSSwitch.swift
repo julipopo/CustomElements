@@ -1,6 +1,6 @@
 //
-//  CustomSwitch.swift
-//  CustomSwitch
+//  JSSwitchh.swift
+//  JSSwitch
 //
 //  Created by julien simmer on 6/19/17.
 //  Copyright © 2017 julien simmer. All rights reserved.
@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class CustomSwitch: UIView {
+class JSSwitch: UIView {
     
     var imageStateOn : UIImage = UIImage()
     var imageStateOff : UIImage = UIImage()
